@@ -16,6 +16,58 @@
     "shared" : false
   },
   "intents" : [ {
+    "id" : 11509759,
+    "path" : "/Что за игра?",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Что это за игра?"
+    }, {
+      "text" : "Как играть?"
+    }, {
+      "text" : "Расскажи про эту игру"
+    }, {
+      "text" : "Какие правила?"
+    }, {
+      "text" : "Как в нее играть?"
+    }, {
+      "text" : "Как играть?"
+    } ],
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 11819851,
+    "path" : "/Слушаю",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Слушаю"
+    }, {
+      "text" : "Да"
+    }, {
+      "text" : "Ага"
+    }, {
+      "text" : "Угу"
+    }, {
+      "text" : "Ес"
+    }, {
+      "text" : "Yes"
+    }, {
+      "text" : "Йеп"
+    } ],
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 11998901,
+    "path" : "/ButWhyTheseAbilities",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Почему именно эта игра?"
+    } ],
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
     "id" : 11508299,
     "path" : "/пока",
     "enabled" : true,
@@ -32,6 +84,108 @@
     "phrases" : [ {
       "text" : "привет"
     } ],
+    "priority" : 0
+  }, {
+    "id" : 11509758,
+    "path" : "/Что ты умеешь?",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Что ты умеешь?"
+    }, {
+      "text" : "Что ты за бот"
+    }, {
+      "text" : "Что ты за бот?"
+    }, {
+      "text" : "Какие у тебя функции?"
+    } ],
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 11823317,
+    "path" : "/WhyOnlyBullsCows",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Почему?"
+    } ],
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 11823418,
+    "path" : "/TrickyQuestion",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ ],
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 11998955,
+    "path" : "/Lets Play",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "сыграем"
+    }, {
+      "text" : "Сыграем!"
+    }, {
+      "text" : "Сыграем"
+    }, {
+      "text" : "Давай играть"
+    }, {
+      "text" : "Начинай игру"
+    }, {
+      "text" : "Давай сыграем"
+    }, {
+      "text" : "Давай поиграем"
+    } ],
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 11998370,
+    "path" : "/WhoAreYou",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "ты кто"
+    } ],
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 11998440,
+    "path" : "/WhatIsYourName",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ ],
+    "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 11998812,
+    "path" : "/ButWhyTheseLimitations",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "Почему больше ничего не умеешь?"
+    }, {
+      "text" : "А че так"
+    }, {
+      "text" : "Почему?"
+    }, {
+      "text" : "И больше ничего?"
+    }, {
+      "text" : "Больше ничего?"
+    }, {
+      "text" : "Маловато"
+    }, {
+      "text" : "Мало"
+    }, {
+      "text" : "И это все?"
+    }, {
+      "text" : "и это всё?"
+    }, {
+      "text" : "И все?"
+    } ],
+    "patterns" : [ ],
     "priority" : 0
   } ],
   "entities" : [ ],

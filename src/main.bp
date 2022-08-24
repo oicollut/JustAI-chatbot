@@ -1,23 +1,621 @@
 {
   "positions" : [ {
-    "id" : "/Start",
-    "x" : 240,
-    "y" : 231
-  }, {
-    "id" : "/Hello",
-    "x" : 240,
-    "y" : 573
-  }, {
-    "id" : "/Bye",
-    "x" : 240,
-    "y" : 895
-  }, {
     "id" : "/NoMatch",
-    "x" : 240,
-    "y" : 1227
+    "x" : 782,
+    "y" : 1527
   }, {
     "id" : "/Match",
-    "x" : 240,
-    "y" : 1560
+    "x" : 1126,
+    "y" : 1531
+  }, {
+    "id" : "/Hello",
+    "name" : "Hello",
+    "x" : 156,
+    "y" : -165
+  }, {
+    "id" : "/Start",
+    "x" : -221,
+    "y" : -238
+  }, {
+    "id" : "/WhatCanYouDo",
+    "x" : 929,
+    "y" : 137
+  }, {
+    "id" : "/HandlingHardQuestions",
+    "x" : 2043,
+    "y" : 1561
+  }, {
+    "id" : "/WhatAreTheRules",
+    "x" : 1645,
+    "y" : 560
+  }, {
+    "id" : "/HandlingHowQuestions",
+    "x" : 131,
+    "y" : 499
+  }, {
+    "id" : "/LetMeIntroduceMyself",
+    "name" : "LetMeIntroduceMyself",
+    "x" : 521,
+    "y" : 11
+  }, {
+    "id" : "/WhatIsYourName",
+    "x" : 547,
+    "y" : -12
+  }, {
+    "id" : "/Because!",
+    "name" : "Because!",
+    "x" : 1312,
+    "y" : 475
+  }, {
+    "id" : "/*Началась игра*",
+    "name" : "*Началась игра*",
+    "x" : 1659,
+    "y" : 797
+  }, {
+    "id" : "/Nonsense",
+    "name" : "Nonsense",
+    "x" : 1153,
+    "y" : 1248
+  }, {
+    "id" : "/ObsceneWord",
+    "name" : "ObsceneWord",
+    "x" : 1770,
+    "y" : 249
+  }, {
+    "id" : "/DoYouLove",
+    "x" : -767,
+    "y" : 418
+  }, {
+    "id" : "/BuyAnElephant",
+    "x" : -425,
+    "y" : 444
+  }, {
+    "id" : "/IDontLoveYou",
+    "x" : -445,
+    "y" : 851
+  }, {
+    "id" : "/ILoveYou",
+    "x" : -787,
+    "y" : 804
+  }, {
+    "id" : "/IDontWantYou",
+    "x" : -1433,
+    "y" : 428
+  }, {
+    "id" : "/IWantYou",
+    "x" : -1103,
+    "y" : 777
+  }, {
+    "id" : "/IDontLikeYou",
+    "x" : -1117,
+    "y" : 1142
+  }, {
+    "id" : "/ILikeYou",
+    "x" : -773,
+    "y" : 1260
+  }, {
+    "id" : "/BadWords",
+    "x" : -442,
+    "y" : 1238
+  }, {
+    "id" : "/WhenHaveYou",
+    "x" : -1385,
+    "y" : 60
+  }, {
+    "id" : "/WhenWillYou",
+    "x" : -1456,
+    "y" : 808
+  }, {
+    "id" : "/WhyDoYouHave",
+    "x" : -1490,
+    "y" : 1181
+  }, {
+    "id" : "/Why",
+    "x" : -1797,
+    "y" : 506
+  }, {
+    "id" : "/WhichOneDoYouKnow",
+    "x" : -1770,
+    "y" : 932
+  }, {
+    "id" : "/IamSick",
+    "x" : -1817,
+    "y" : 1204
+  }, {
+    "id" : "/IFeelBad",
+    "x" : -1493,
+    "y" : 1604
+  }, {
+    "id" : "/MyLoveLeftMe",
+    "x" : -1142,
+    "y" : 1551
+  }, {
+    "id" : "/WhatShouldIDoWhen",
+    "x" : -773,
+    "y" : 1604
+  }, {
+    "id" : "/WhouldYouLikeToTry",
+    "x" : -422,
+    "y" : 1613
+  }, {
+    "id" : "/WhoAmI",
+    "x" : -1828,
+    "y" : 1763
+  }, {
+    "id" : "/WhenWillBeSnow",
+    "x" : -1489,
+    "y" : 2037
+  }, {
+    "id" : "/WhereFirstDateDate",
+    "x" : -1087,
+    "y" : 422
+  }, {
+    "id" : "/YouDontLikeTalking",
+    "x" : -1081,
+    "y" : -84
+  }, {
+    "id" : "/WhatColorIs",
+    "x" : -766,
+    "y" : 28
+  }, {
+    "id" : "/HowToKeepLiving",
+    "x" : -1692,
+    "y" : 82
+  }, {
+    "id" : "/YouAreABadHelper",
+    "x" : -2005,
+    "y" : -96
+  }, {
+    "id" : "/WhereToComplain",
+    "x" : -1690,
+    "y" : -296
+  }, {
+    "id" : "/WhyTheyDontPayMe",
+    "x" : -1390,
+    "y" : -457
+  }, {
+    "id" : "/WhereIs",
+    "x" : -1074,
+    "y" : -447
+  }, {
+    "id" : "/WhyMenDo",
+    "x" : -775,
+    "y" : -405
+  }, {
+    "id" : "/WhyWomenDo",
+    "x" : -2186,
+    "y" : 468
+  }, {
+    "id" : "/WhyDoYouAvoidAnswering",
+    "x" : -2932,
+    "y" : -66
+  }, {
+    "id" : "/GiveAdvice",
+    "x" : -2346,
+    "y" : -82
+  }, {
+    "id" : "/ShouldI",
+    "x" : -2644,
+    "y" : -41
+  }, {
+    "id" : "/AreYouSure",
+    "x" : -2027,
+    "y" : -509
+  }, {
+    "id" : "/WhenNextWar",
+    "x" : -2371,
+    "y" : -524
+  }, {
+    "id" : "/WhatIsTheSoftestThing",
+    "x" : -2716,
+    "y" : -493
+  }, {
+    "id" : "/WhenWillBeHungerTimes",
+    "x" : -3087,
+    "y" : -493
+  }, {
+    "id" : "/BeSerious",
+    "x" : -3071,
+    "y" : -864
+  }, {
+    "id" : "/HowOften",
+    "x" : -2546,
+    "y" : 457
+  }, {
+    "id" : "/WhatIsTheDifferenceBetween3",
+    "x" : -2881,
+    "y" : 432
+  }, {
+    "id" : "/WhatIsTheDifferenceBetween2",
+    "x" : -3226,
+    "y" : 437
+  }, {
+    "id" : "/WhatIsTheDifferenceBetween1",
+    "x" : -3395,
+    "y" : -102
+  }, {
+    "id" : "/CanI",
+    "x" : -2196,
+    "y" : 936
+  }, {
+    "id" : "/LetsGoTo",
+    "x" : -2567,
+    "y" : 920
+  }, {
+    "id" : "/DoItNow",
+    "x" : -2968,
+    "y" : 941
+  }, {
+    "id" : "/GiveMeMoney",
+    "x" : -3354,
+    "y" : 859
+  }, {
+    "id" : "/HowToQuitSmokingDrinking",
+    "x" : -2196,
+    "y" : 1327
+  }, {
+    "id" : "/HowToLoseWeight",
+    "x" : -2588,
+    "y" : 1332
+  }, {
+    "id" : "/IsCrimeaOurs",
+    "x" : -2963,
+    "y" : 1332
+  }, {
+    "id" : "/TellAJoke",
+    "x" : -3328,
+    "y" : 1358
+  }, {
+    "id" : "/WhoWin",
+    "x" : -3596,
+    "y" : 473
+  }, {
+    "id" : "/Where2",
+    "x" : -3406,
+    "y" : -612
+  }, {
+    "id" : "/WhichOne",
+    "x" : -2706,
+    "y" : -905
+  }, {
+    "id" : "/HaveYouArgued",
+    "x" : -2346,
+    "y" : -998
+  }, {
+    "id" : "/WhatDoYouThinkAbout",
+    "x" : -1687,
+    "y" : -823
+  }, {
+    "id" : "/WhoYouWantToBe",
+    "x" : -2016,
+    "y" : -1075
+  }, {
+    "id" : "/Which",
+    "x" : -1368,
+    "y" : -802
+  }, {
+    "id" : "/Who",
+    "x" : -1049,
+    "y" : -869
+  }, {
+    "id" : "/HowWouldYouSpendMoney",
+    "x" : -740,
+    "y" : -987
+  }, {
+    "id" : "/PerfectLife",
+    "x" : -3719,
+    "y" : -102
+  }, {
+    "id" : "/SocialMedia",
+    "x" : -3755,
+    "y" : -565
+  }, {
+    "id" : "/DoYouBeliveIn",
+    "x" : -3421,
+    "y" : -1013
+  }, {
+    "id" : "/Where",
+    "x" : -3761,
+    "y" : -972
+  }, {
+    "id" : "/WhatDoYouLikeInPeople",
+    "x" : -3719,
+    "y" : 833
+  }, {
+    "id" : "/FavoriteQuote",
+    "x" : -2948,
+    "y" : 1723
+  }, {
+    "id" : "/WhichCountryWouldYouLikeToVisit",
+    "x" : -3298,
+    "y" : 1754
+  }, {
+    "id" : "/WhatDoYouHateInPeople",
+    "x" : -3686,
+    "y" : 1672
+  }, {
+    "id" : "/WhatIsYourFavoriteBook",
+    "x" : -4102,
+    "y" : -942
+  }, {
+    "id" : "/Insomnia",
+    "x" : -4065,
+    "y" : -73
+  }, {
+    "id" : "/Exactly",
+    "x" : -4084,
+    "y" : 868
+  }, {
+    "id" : "/HowWasYourWeekend",
+    "x" : -4453,
+    "y" : -896
+  }, {
+    "id" : "/CountSheep",
+    "x" : -3067,
+    "y" : -1238
+  }, {
+    "id" : "/WhatPlansForToday",
+    "x" : -4444,
+    "y" : -378
+  }, {
+    "id" : "/TeaOrCoffee",
+    "x" : -4435,
+    "y" : 138
+  }, {
+    "id" : "/IfYou",
+    "x" : -4832,
+    "y" : -452
+  }, {
+    "id" : "/CanYou",
+    "x" : -4850,
+    "y" : -46
+  }, {
+    "id" : "/HowCanYou",
+    "x" : -4462,
+    "y" : 609
+  }, {
+    "id" : "/WantPhoto",
+    "x" : -4795,
+    "y" : -896
+  }, {
+    "id" : "/DoYouLikeTakePhotos",
+    "x" : -4814,
+    "y" : 378
+  }, {
+    "id" : "/WhatIsYourFavorite",
+    "x" : -4444,
+    "y" : 1025
+  }, {
+    "id" : "/Tattoo",
+    "x" : -4804,
+    "y" : 859
+  }, {
+    "id" : "/YouHadThat",
+    "x" : -2716,
+    "y" : -1312
+  }, {
+    "id" : "/SoWhatAboutYou",
+    "x" : -1681,
+    "y" : -1228
+  }, {
+    "id" : "/MySomething",
+    "x" : -1339,
+    "y" : -1228
+  }, {
+    "id" : "/TheMostXDreamYouHad",
+    "x" : -2383,
+    "y" : -1450
+  }, {
+    "id" : "/TheMostXthingYouHaveDone",
+    "x" : -3428,
+    "y" : -1450
+  }, {
+    "id" : "/WhereDoYouLive",
+    "x" : -3788,
+    "y" : -1422
+  }, {
+    "id" : "/DoYouWantToBecomeHuman",
+    "x" : -4167,
+    "y" : -1376
+  }, {
+    "id" : "/AreYouGay",
+    "x" : -4509,
+    "y" : -1413
+  }, {
+    "id" : "/WhatDoYouThinkAboutAlice",
+    "x" : -4074,
+    "y" : 1422
+  }, {
+    "id" : "/WhatDoYouThinkAboutSpb",
+    "x" : -2032,
+    "y" : -1570
+  }, {
+    "id" : "/WhatIsYourDream",
+    "x" : -1653,
+    "y" : -1700
+  }, {
+    "id" : "/DoYouLike",
+    "x" : -3039,
+    "y" : -1644
+  }, {
+    "id" : "/DrinkSmoke",
+    "x" : -2716,
+    "y" : -1838
+  }, {
+    "id" : "/WhatIsYourFavoritePhone",
+    "x" : -3769,
+    "y" : -1940
+  }, {
+    "id" : "/WhenTheWorldEnds",
+    "x" : -4204,
+    "y" : -1847
+  }, {
+    "id" : "/WhyAmISoStupid",
+    "x" : -4037,
+    "y" : 1847
+  }, {
+    "id" : "/OkayGoogle",
+    "x" : -4470,
+    "y" : 1485
+  }, {
+    "id" : "/WhoAreThesePeople",
+    "x" : -2179,
+    "y" : 2092
+  }, {
+    "id" : "/TellSomethingInteresting",
+    "x" : -1509,
+    "y" : 2411
+  }, {
+    "id" : "/IsThereLifeOnMars",
+    "x" : -2977,
+    "y" : 2275
+  }, {
+    "id" : "/WhyEarthIsRound",
+    "x" : -3315,
+    "y" : 2288
+  }, {
+    "id" : "/WhoWillBeNextPresident",
+    "x" : -2964,
+    "y" : 2704
+  }, {
+    "id" : "/WhatIsThePointOfLife",
+    "x" : -3341,
+    "y" : 2743
+  }, {
+    "id" : "/YouAreMyFriend",
+    "x" : -2574,
+    "y" : 2470
+  }, {
+    "id" : "/DoYouHaveFriends",
+    "x" : -1482,
+    "y" : 2210
+  }, {
+    "id" : "/DoYouHaveADate",
+    "x" : -2132,
+    "y" : 2743
+  }, {
+    "id" : "/WhoAreYourFriends",
+    "x" : -2587,
+    "y" : 2912
+  }, {
+    "id" : "/WhatIsLove",
+    "x" : -3731,
+    "y" : 2483
+  }, {
+    "id" : "/WhoDoYouLove",
+    "x" : -1651,
+    "y" : 2795
+  }, {
+    "id" : "/WhatDoYouFear",
+    "x" : -1313,
+    "y" : 2795
+  }, {
+    "id" : "/WhatDoYouLove",
+    "x" : -1157,
+    "y" : 2028
+  }, {
+    "id" : "/WhatIsYourFavoriteAnimal",
+    "x" : -4121,
+    "y" : 2392
+  }, {
+    "id" : "/WhatIsYourFavoriteGame",
+    "x" : -4472,
+    "y" : 2028
+  }, {
+    "id" : "/WhatIsYourFavoriteMovie",
+    "x" : -4823,
+    "y" : 1365
+  }, {
+    "id" : "/WhatIsYourFavoriteMusic",
+    "x" : -4875,
+    "y" : 1924
+  }, {
+    "id" : "/WhatIsYourFavoriteDrink",
+    "x" : -1144,
+    "y" : 2184
+  }, {
+    "id" : "/WhatIsYourFavoriteFood",
+    "x" : -1157,
+    "y" : 2340
+  }, {
+    "id" : "/WhatIsYourFavoriteColor",
+    "x" : -1131,
+    "y" : 2496
+  }, {
+    "id" : "/CanYouCount",
+    "x" : -4550,
+    "y" : 2600
+  }, {
+    "id" : "/WhatLanguageDoYouKnow",
+    "x" : -4186,
+    "y" : 2925
+  }, {
+    "id" : "/WhatGenderAreYou",
+    "x" : -4940,
+    "y" : 2418
+  }, {
+    "id" : "/Wait",
+    "x" : -2912,
+    "y" : 3302
+  }, {
+    "id" : "/YouDontUnderstand",
+    "x" : -2535,
+    "y" : 3367
+  }, {
+    "id" : "/Thanks",
+    "x" : -2106,
+    "y" : 3289
+  }, {
+    "id" : "/DontNeedHelpAnymore",
+    "x" : -1833,
+    "y" : 2158
+  }, {
+    "id" : "/HaveQuestion",
+    "x" : -5187,
+    "y" : 559
+  }, {
+    "id" : "/NeedHelp",
+    "x" : -5278,
+    "y" : 1495
+  }, {
+    "id" : "/Bye",
+    "x" : -5187,
+    "y" : -130
+  }, {
+    "id" : "/Welcome",
+    "x" : -5213,
+    "y" : -793
+  }, {
+    "id" : "/WhoMadeYou",
+    "x" : -5265,
+    "y" : 2210
+  }, {
+    "id" : "/HowOldAreYou",
+    "x" : -5538,
+    "y" : 221
+  }, {
+    "id" : "/WhatIsYourDuty",
+    "x" : -5616,
+    "y" : 1053
+  }, {
+    "id" : "/WhereWereYouBorn",
+    "x" : -5642,
+    "y" : -585
+  }, {
+    "id" : "/AreYouRobot",
+    "x" : -5967,
+    "y" : 325
+  }, {
+    "id" : "/WhoAreYou",
+    "x" : -4966,
+    "y" : -1521
+  }, {
+    "id" : "/News",
+    "x" : -5486,
+    "y" : -1352
+  }, {
+    "id" : "/HowAreYou",
+    "x" : -5993,
+    "y" : -1118
   } ]
 }

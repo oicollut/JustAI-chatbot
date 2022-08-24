@@ -14,3 +14,9 @@ sts:
 
 caila:
     noMatchThreshold: 0.2
+
+dependencies:
+  - name: patterns
+    type: module
+  - name: offtopic
+    type: module
