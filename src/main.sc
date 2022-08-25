@@ -79,7 +79,6 @@ theme: /
                 a: Вы победили!
             else:
                 a: Неверное число!
-            go!: /NumberInput
                 
                         
                 
