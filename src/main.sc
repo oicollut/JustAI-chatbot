@@ -1,5 +1,7 @@
 require: patterns.sc
    module =  sys.zb-common
+require: number/number.sc
+   module = sys.zb-common 
    
 #require: scripts/functions.js
    
@@ -70,7 +72,17 @@ theme: /
                     $session.number = $session.number + x;
                 };
         a: Я загадал число {{$session.number}}!
+    
+        state: NumberInput
+            q: $NumberSimple || onlyThisState = true
+            a: Вот это число!
+            if: {{$request.query}} = $session.number
+                a: Вы победили!
+                        
+                
+                
         
+    
 
     #state: HandlingHardQuestions
         #random: 
