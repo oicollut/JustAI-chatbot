@@ -62,22 +62,23 @@ theme: /
         a: *Игра начинается* || htmlEnabled = false, html = "*Игра начинается*"
         script: var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
                 var x;
-                $session.number = "";
+                var botnumber = "";
         
                 for (var i = 0; i < 4; i++) {
                     x = Math.floor(Math.random() * numbers.length);
                     x = numbers[x]
                     var index = numbers.indexOf(x);
                     numbers.splice(index, 1)
-                    $session.number = $session.number + x;
+                    botnumber = botnumber + x;
                 };
-        a: Я загадал число {{$session.number}}!
+        a: Я загадал число {{botnumber}}!
     
         state: NumberInput
             q: $NumberSimple || onlyThisState = true
             a: Вот это число!
-            if: {{$request.query}} = $session.number
+            if: $request.query = botnumber
                 a: Вы победили!
+            else: Неверное число!
                         
                 
                 
