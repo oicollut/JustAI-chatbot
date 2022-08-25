@@ -73,17 +73,31 @@ theme: /
                 };
         a: Я загадал число {{$session.number}}!
     
-        state: NumberInput
-            q: $NumberSimple || onlyThisState = true
+        state: NumberInput1
+            q: $NumberSimple
             if: $request.query == $session.number
                 a: Вы победили!
-            else:
+            else: 
                 a: Неверное число!
+                a: Попробуйте еще раз.
+                go!: /*Началась игра*/WantToContinue?
                 
+                    
+        state: WantToContinue?
+               a: Если хотите продолжить, напишите "Продолжить!"
+        
+        state: YesContinue!
+            q: Продолжить!
+            a: Отлично! Введите число.
+            
+        state: StopGame
+            q!: Завершить
+            go!: /END
                         
                 
                 
-        
+    state: END
+        a: До свидания!
     
 
     #state: HandlingHardQuestions
