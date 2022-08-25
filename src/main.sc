@@ -1,7 +1,7 @@
 require: patterns.sc
    module =  sys.zb-common
    
-require: scripts/functions.js
+#require: scripts/functions.js
    
 #require: newOfftopic/newOfftopic.sc
     #module = sys.zb-common
@@ -58,22 +58,19 @@ theme: /
     state: *Началась игра*
         intent: /Lets Play || onlyThisState = false
         a: *Игра начинается* || htmlEnabled = false, html = "*Игра начинается*"
-        script: const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-
-                let x;
-                let $session.number = "";
-
-                for (let i = 0; i < 4; i++) {
+        script: var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+                var x;
+                $session.number = "";
+        
+                for (var i = 0; i < 4; i++) {
                     x = Math.floor(Math.random() * numbers.length);
-                    const index = numbers.indexOf(x);
-                    if (index > -1) {
-                        numbers.splice(index, 1)
-                    }
-                     $session.number = $session.number + x;
-                }
-                console.log($session.number);
-                }
+                    x = numbers[x]
+                    var index = numbers.indexOf(x);
+                    numbers.splice(index, 1)
+                    $session.number = $session.number + x;
+                };
         a: Я загадал число {{$session.number}}!
+        
 
     #state: HandlingHardQuestions
         #random: 
