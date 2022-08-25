@@ -74,21 +74,23 @@ theme: /
         a: Я загадал число {{$session.number}}!
     
         state: NumberInput1
-            q: $NumberSimple
+            q: $NumberSimple || onlyThisState = false
             if: $request.query == $session.number
                 a: Вы победили!
             else: 
-                a: Неверное число!
-                a: Попробуйте еще раз.
-                go!: /*Началась игра*/WantToContinue?
-                
-                    
-        state: WantToContinue?
-               a: Если хотите продолжить, напишите "Продолжить!"
-        
-        state: YesContinue!
-            q: Продолжить!
-            a: Отлично! Введите число.
+                script:
+                    $session.b = 0; 
+                    $session.c = 0;
+                    for (var i = 0; i < 4; i++) {
+                    if ($request.query[i] == $session.number[i]) {
+                       $session.b += 1
+                    }
+                    else if ($session.number.indexOf($request.query[i]) != -1) {
+                       $session.c +=1
+                    }
+                    }
+                a: Быков: {{$session.b}}, коров: {{$session.c}}. Продолжаем!
+
             
         state: StopGame
             q!: Завершить
