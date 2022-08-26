@@ -5,8 +5,8 @@ require: number/number.sc
    
 #require: scripts/functions.js
    
-#require: newOfftopic/newOfftopic.sc
-    #module = sys.zb-common
+require: offtopic/offtopic.sc
+   module = sys.zb-common
 
   
 theme: /
@@ -123,7 +123,7 @@ theme: /
         q!: [$AnyWord] [$AnyWord] [$AnyWord]  фамилия (как* твоя|какая у тебя|какая у вас|твоя|ваша) [$AnyWord] [$AnyWord] [$AnyWord]  
         q!: [$AnyWord] [$AnyWord] [$AnyWord]  а фамилия какая 
         q!: [$AnyWord] [$AnyWord] [$AnyWord]  {(как*|назови*) [мне] * $you * (зовут|звать|завут|имя|называть|обращат*|обращя*|обращац*)} * 
-        q!: кто (будешь|будете) 
+        q!: [$you] кто (будешь|будете) [(такой/такая)]
         q!: [$AnyWord] [$AnyWord] [$AnyWord]  как* * $you * себя * называе* [$AnyWord] [$AnyWord] [$AnyWord]  
         q!: [а] {как [$you] зовут} 
         q!: [$AnyWord] [$AnyWord] [$AnyWord]  {($you|как*) * (отчество|имя|кличка|кликуха|погоняло)} [$AnyWord] [$AnyWord] [$AnyWord]  
