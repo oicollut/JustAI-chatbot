@@ -86,10 +86,24 @@ theme: /
                     $session.number = $session.number + x;
                 };
         a: Я загадал число {{$session.number}}!
+        
+        state: AskForNumber
+            a: Введите число
     
         state: ValidateNumberInput
             q: $NumberSimple || onlyThisState = false
             script:
+              $session.r = "";
+              var userKeyRegExp = /[0-9]{4}/;
+              if ($request.query == userKeyRegExp) {
+                $session.r = "Сейчас посмотрим"
+              } else {
+                $session.r = "Неверный формат. Введите четырёхзначное число с неповторяющимися цифрами."
+              }
+            a: {{$session.r}}
+            if: $session.r = "Неверный формат. Введите четырёхзначное число с неповторяющимися цифрами."
+                go!: 
+            
             
             state: NumberInput
             q: $NumberSimple || onlyThisState = false
@@ -107,7 +121,7 @@ theme: /
                        $session.c +=1
                     }
                     }
-                a: Быков: {{$session.b}}, коров: {{$session.c}}. Продолжаем!
+                a: В числе {{$request.query}} быков: {{$session.b}}, коров: {{$session.c}}. Продолжаем!
 
             
         state: StopGame
