@@ -88,7 +88,7 @@ theme: /
         a: Я загадал число {{$session.number}}!
         
         state: AskForNumber
-            a: Введите число
+          a: Введите число
     
         state: ValidateNumberInput
             q: $NumberSimple || onlyThisState = false
@@ -102,7 +102,7 @@ theme: /
               }
             a: {{$session.r}}
             if: $session.r = "Неверный формат. Введите четырёхзначное число с неповторяющимися цифрами."
-                go!: 
+                go!: /AskForNumber
             
             
             state: NumberInput
