@@ -5,8 +5,8 @@ require: number/number.sc
    
 #require: scripts/functions.js
    
-#require: newOfftopic/newOfftopic.sc
-    #module = sys.zb-common
+require: offtopic/offtopic.sc
+   module = sys.zb-common
 
   
 theme: /
@@ -73,18 +73,33 @@ theme: /
                 };
         a: Я загадал число {{$session.number}}!
     
-        state: NumberInput
-            q: $NumberSimple || onlyThisState = true
+        state: NumberInput1
+            q: $NumberSimple || onlyThisState = false
             if: $request.query == $session.number
                 a: Вы победили!
-            else:
-                a: Неверное число!
-            go!: /NumberInput
-                
+            else: 
+                script:
+                    $session.b = 0; 
+                    $session.c = 0;
+                    for (var i = 0; i < 4; i++) {
+                    if ($request.query[i] == $session.number[i]) {
+                       $session.b += 1
+                    }
+                    else if ($session.number.indexOf($request.query[i]) != -1) {
+                       $session.c +=1
+                    }
+                    }
+                a: Быков: {{$session.b}}, коров: {{$session.c}}. Продолжаем!
+
+            
+        state: StopGame
+            q!: Завершить
+            go!: /END
                         
                 
                 
-        
+    state: END
+        a: До свидания!
     
 
     #state: HandlingHardQuestions
@@ -108,7 +123,7 @@ theme: /
         q!: [$AnyWord] [$AnyWord] [$AnyWord]  фамилия (как* твоя|какая у тебя|какая у вас|твоя|ваша) [$AnyWord] [$AnyWord] [$AnyWord]  
         q!: [$AnyWord] [$AnyWord] [$AnyWord]  а фамилия какая 
         q!: [$AnyWord] [$AnyWord] [$AnyWord]  {(как*|назови*) [мне] * $you * (зовут|звать|завут|имя|называть|обращат*|обращя*|обращац*)} * 
-        q!: кто (будешь|будете) 
+        q!: [$you] кто (будешь|будете) [(такой/такая)]
         q!: [$AnyWord] [$AnyWord] [$AnyWord]  как* * $you * себя * называе* [$AnyWord] [$AnyWord] [$AnyWord]  
         q!: [а] {как [$you] зовут} 
         q!: [$AnyWord] [$AnyWord] [$AnyWord]  {($you|как*) * (отчество|имя|кличка|кликуха|погоняло)} [$AnyWord] [$AnyWord] [$AnyWord]  
