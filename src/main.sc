@@ -15,12 +15,14 @@ theme: /
 
     state: NoMatch
         event!: noMatch
-        a: Я не понял. Вы сказали: {{$request.query}}
+        if: $session.nomatch < 3
+            a: Я не понял. Вы сказали: {{$request.query}}
         script: $session.nomatch += 1
         if: $session.nomatch > 3
-            a: Что-то я вас не понимаю...
-            go!: /BackToBusiness
+            a: Что-то я вас опять не понимаю... 
             script: $session.nomatch = 0
+            go!: /BackToBusiness
+            
         
     state: Start
         q!: $regex</start>
@@ -160,8 +162,8 @@ theme: /
     
     state: BackToBusiness
         random: 
-            a: Вернемся к делу. Если готовы сыграть со мной в "Быки и коровы", нажмите "Сыграем!". Чтобы прочитать правила, нажмите "Правила игры". 
-            buttons:
+            a: Вернемся к делу. Если готовы сыграть со мной в "Быки и коровы", нажмите "Сыграем!". Чтобы прочитать правила, нажмите "Правила игры".
+        buttons:
             "Сыграем!" -> /*Началась игра*
             "Правила игры" -> /GameRules
 
