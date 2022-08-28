@@ -48,7 +48,7 @@ theme: /
         q!: * (хорошего|приятного|доброго) * (дня|вечера) [вам|тебе] !
         q: [$AnyWord] (ок*/да/ладн*/договорились/(ловлю/поймал*) [на]) [$AnyWord] || fromState = ../Thanks
         q: [$AnyWord] (ок*/да/ладн*/договорились/(ловлю/поймал*) [на]) [$AnyWord] || fromState = ../DontNeedHelpAnymore
-        a: какой-то ответ("Bye");
+        a: До свидания!
 
     state: WhatCanYouDo
         q!: * {(что/че/о чём/про что) * [с] [$you] (умеешь/може*/можно) [*говор*/*говар*]} *
@@ -152,6 +152,7 @@ theme: /
 
         state: StopGame
             a: Игра завершена. До свидания!
+            go!: /END
 
     state: WhatIsYourName
         q!: * {как (тебя/~твой/вас/ваше) (имя/называ*/назвал*/звать/зовут)} *
@@ -179,11 +180,9 @@ theme: /
         buttons:
             "Сыграем!" -> /*Началась игра*
             "Правила игры" -> /GameRules
-
-    state: ObsceneWord
-        q!: * $obsceneWord *
-        random:
-            a: Не надо ругаться.
+    
+    state: END
+        q!: $regex</end>
             
     
     
