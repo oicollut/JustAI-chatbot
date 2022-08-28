@@ -20,7 +20,7 @@ theme: /
         q!: [привет] * как* * [$you|твои|твоё|ваш*] * (дела|де ла|делишки|делаа|дила|себя (чувствуешь|чувствуете)|поживаешь|поживаете|настроение|жизнь) *
         q!: [привет] * (кагдила|каг дила|хау а ю) *
         q!: [привет] ({как (ты|вы)}|как (живёшь|живёте)) [$AnyWord] [$AnyWord] [$AnyWord] 
-        q!: [$AnyWord] [$AnyWord] [$AnyWord]  как [$AnyWord] [$AnyWord] [$AnyWord] (твой|ваш|прошел|прошёл) [$AnyWord] [$AnyWord] [$AnyWord]  день [$AnyWord] [$AnyWord] [$AnyWord] 
+        q!: [$AnyWord] [$AnyWord] [$AnyWord]  как [$AnyWord] [$AnyWord] [$AnyWord] (твой|ваш|прошел|прошёл) [$AnyWord] [$AnyWord] [$AnyWord] день [$AnyWord] [$AnyWord] [$AnyWord] 
         q!: * $you в порядке [$AnyWord] [$AnyWord] [$AnyWord] 
         q!: * как (житье|житуха|жись|оно|живется|живётся|сама|сами) *
         q!: * как* (жизнь|живет*|живёш*|жывет*|жывёш*|жевёш*|жевет*|жызнь) *
