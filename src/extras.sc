@@ -3,9 +3,7 @@ require: patterns.sc
 #require: name/name.sc
    #module = sys.zb-common 
 
-theme: /NewOfftopic
-    state: Fallback
-        a: какой-то ответ("Fallback");
+theme: /offtopic
     
     state: DontWantToPlay
         q!: не хочу [играть]
@@ -219,7 +217,6 @@ theme: /NewOfftopic
         q!: * чем {отлич* ($AnyWord *)} от $AnyWord * *
         a: Это вопрос философский.
         go!: /BackToBusiness
-
 
     state: WhyDoYouAvoidAnswering
         q!: * почему (ты/вы) * ((уходишь/уклоняешься) от ответа/не отвечаешь) *
