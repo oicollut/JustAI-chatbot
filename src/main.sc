@@ -70,8 +70,6 @@ theme: /
         buttons:
             "Сыграем!" -> /*Началась игра*
             "Правила игры" -> /GameRules
-        intent: /ButWhyTheseLimitations || onlyThisState = false, toState = "/Because!"
-        intent: /ButWhyTheseAbilities || onlyThisState = false, toState = "/Because!"
 
     state: GameRules
         q!: * как [в] [(нее/эту игру/бык* и коров*/это)] игра* [?]
@@ -85,59 +83,74 @@ theme: /
     state: *Началась игра*
         q!: cыграем [!]
         q!: * (давай поиграем/сыграем/играть) [в] [игру/быки и коровы]
-        a: *Игра начинается* || htmlEnabled = false, html = "*Игра начинается*"
-        a: Чтобы завершить игру в любой момент, напишите: "Стоп"
-        script: var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
-                var x;
-                $session.number = "";
-        
-                for (var i = 0; i < 4; i++) {
-                    x = Math.floor(Math.random() * numbers.length);
-                    x = numbers[x]
-                    var index = numbers.indexOf(x);
-                    numbers.splice(index, 1)
-                    $session.number = $session.number + x;
-                };
-        a: Я загадал число {{$session.number}}!
-        
+        script:
+            var numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+            var x;
+            $session.number = "";
+            for (var i = 0; i < 4; i++) {
+                x = Math.floor(Math.random() * numbers.length);
+                x = numbers[x]
+                var index = numbers.indexOf(x);
+                numbers.splice(index, 1)
+                $session.number = $session.number + x;
+            };
+            $session.attempts = 0
+        a: Я загадал число {{$session.number}}! Ваш ход.
+        buttons:
+            "Завершить игру" -> /*Началась игра*/StopGame
+
         state: TryAgain
           a: Давайте еще раз!
             
         state: NumberInput
             q: $NumberSimple || onlyThisState = false
             script:
-              $session.r = "";
-              $session.valid = "Сейчас посмотрим..."
-              $session.invalid = "Неверный формат. Число должно быть четырёхзначным, цифры не должны повторяться."
-              var re = /^[0-9]{4}$/;
-              if (re.test($request.query) == true){
-                $session.r = $session.valid
-              } 
-              else {
+                $session.r = "";
+                      $session.valid = "Сейчас посмотрим..."
+                      $session.invalid = "Неверный формат. Число должно быть четырёхзначным, цифры не должны повторяться." + " " + "Ваше число: " + $request.query
+                      var re = /^[0-9]{4}$/;
+                      var massive = [];
+                      $session.r = $session.valid
+                      if (re.test($request.query) == true){
+                for (var i in $request.query) {
+                   var num = $request.query[i]
+                   if (massive.indexOf(num) == -1) {
+                massive.push(num)
+                   } else {
                 $session.r = $session.invalid
-              }
+                break
+                   }
+                }
+                      } else {
+                $session.r = $session.invalid
+                      }
             a: {{$session.r}}
+            if: $session.r == $session.valid
+                script:
+                    $session.attempts += 1
+            else: 
             if: $session.r == $session.invalid
                 go!: /*Началась игра*/TryAgain
+            else: 
             if: $request.query == $session.number
-                a: Вы победили!
+                a: Поздравляю! Ходов до победы: {{$session.attempts}}.
             else: 
                 script:
                     $session.b = 0; 
-                    $session.c = 0;
-                    for (var i = 0; i < 4; i++) {
-                    if ($request.query[i] == $session.number[i]) {
-                       $session.b += 1
-                    }
-                    else if ($session.number.indexOf($request.query[i]) != -1) {
-                       $session.c +=1
-                    }
-                    }
+                        $session.c = 0;
+                        for (var i = 0; i < 4; i++) {
+                        if ($request.query[i] == $session.number[i]) {
+                           $session.b += 1
+                        }
+                        else if ($session.number.indexOf($request.query[i]) != -1) {
+                           $session.c +=1
+                        }
+                        }
                 a: В числе {{$request.query}} быков: {{$session.b}}, коров: {{$session.c}}. Продолжаем!
+            buttons:
+                "Завершить игру" -> /*Началась игра*/StopGame
 
-            
         state: StopGame
-            q!: Стоп
             a: Игра завершена. До свидания!
 
     state: WhatIsYourName
@@ -166,16 +179,6 @@ theme: /
         buttons:
             "Сыграем!" -> /*Началась игра*
             "Правила игры" -> /GameRules
-
-    state: Because!
-        random: 
-            a: Так вот получилось. || htmlEnabled = false, html = "Так вот получилось."
-            a: Так вот вышло. || htmlEnabled = false, html = "Так вот вышло."
-            a: Ну вот такой я бот)  || htmlEnabled = false, html = "Ну вот такой я бот) "
-            go!: /BackToBusiness
-
-    #state: Nonsense
-        #q!: $AnyWord
 
     state: ObsceneWord
         q!: * $obsceneWord *
