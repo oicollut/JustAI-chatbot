@@ -16,7 +16,7 @@ theme: /
     state: NoMatch
         event!: noMatch
         if: $session.nomatch < 3
-            a: Я не понял. Вы сказали: {{$request.query}}
+            a: Я не понял. Вы сказали: "{{$request.query}}".
         script: $session.nomatch += 1
         if: $session.nomatch > 3
             a: Что-то я вас опять не понимаю... 
@@ -95,7 +95,7 @@ theme: /
                 $session.number = $session.number + x;
             };
             $session.attempts = 0
-        a: Я загадал число {{$session.number}}! Ваш ход.
+        a: Я загадал число! Ваш ход.
         buttons:
             "Завершить игру" -> /*Началась игра*/StopGame
 
