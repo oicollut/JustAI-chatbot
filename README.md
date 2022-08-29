@@ -7,3 +7,4 @@ The platform uses JAICP DSL for the script and JavaScript to describe business l
 JAICP's "Patterns" are used as a kind of simplified regex to describe user input (triggers), 
 e.g. * {(how [many|much]) (gamer*|player*|people) [can] [play]} *
 The point of this bot is to play Bulls and Cows, there are no extra features.
+My code can be found in src
